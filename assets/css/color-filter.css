@@ -1,0 +1,1 @@
+.color-filter{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:22px 0}.color-filter select{padding:9px 12px;background:#141e2d;color:#eef3fc;border:1px solid #526785;border-radius:6px;font:inherit}.color-filter span{color:#a2afc4;font-size:13px}.channel-stack{display:grid;grid-auto-rows:minmax(1.6em,auto);white-space:nowrap}.channel-stack span{display:block}

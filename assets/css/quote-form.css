@@ -1,0 +1,68 @@
+
+  .quote-section {
+    box-sizing: border-box;
+    max-width: 640px;
+    margin: 48px auto;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+  }
+
+  .quote-section h2 {
+    margin-bottom: 12px;
+  }
+
+  .quote-section p {
+    line-height: 1.6;
+  }
+
+  .quote-section label {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .quote-section input,
+  .quote-section textarea {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font: inherit;
+  }
+
+  .quote-section input:focus,
+  .quote-section textarea:focus {
+    outline: 2px solid #555;
+    outline-offset: 1px;
+  }
+
+  .quote-section button {
+    margin-top: 20px;
+    padding: 13px 24px;
+    border: none;
+    border-radius: 5px;
+    background: #111;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .quote-section button:hover {
+    background: #333;
+  }
+
+  .quote-section .quote-note {
+    margin-top: 14px;
+    font-size: 13px;
+    color: #666;
+  }
+
+  @media (max-width: 600px) {
+    .quote-section {
+      margin: 24px auto;
+      padding: 18px;
+    }
+  }

@@ -1,0 +1,58 @@
+
+    /* RareMate dark technology theme */
+    :root { color-scheme: dark; --navy: #070a10; --blue: #68a5ff; --text: #eef3fc; --muted: #a2afc4; --light: #0d121c; }
+    body { background: #080b12; color: var(--text); }
+    header { background: #0a0e17; border-bottom: 1px solid #263247; }
+    .logo { color: #f5f8ff; }
+    .nav-links a { color: #dbe5f5; }
+    .nav-products { color: #dbe5f5; }
+    .hero { background: radial-gradient(ellipse at 85% 10%, #182c4d 0, transparent 48%), linear-gradient(135deg, #080b12, #101826); border-bottom: 1px solid #233149; }
+    .hero p, .contact p { color: #b8c6db; }
+    .eyebrow { color: #80b8ff; }
+    .section-light { background: #0d121c; }
+    .card, .application { background: linear-gradient(145deg, #141c2a, #0f1520); border-color: #29364c; box-shadow: 0 12px 30px #00000026; }
+    .card { border-radius: 14px; }
+    .application { border-radius: 12px; }
+    .card:hover, .application:hover { border-color: #42608a; }
+    a { color: #81b7ff; }
+    a:hover { color: #b3d5ff; }
+    .category-title-link { color: #eef3fc; }
+    .category-title-link:hover, .category-title-link:focus-visible { color: #8fc3ff; }
+    .button, .nav-links a.button, .card .button { background: linear-gradient(120deg, #2563eb, #235bc9); color: #fff; border: 1px solid #578cf0; box-shadow: 0 5px 20px #1457cd26; }
+    .button:hover { background: #3274ef; color: #fff; }
+    .contact { background: linear-gradient(135deg, #0d1523, #080b12); border-top: 1px solid #263247; }
+    footer { background: #070a10; border-top: 1px solid #263247; color: #a2afc4; }
+    .dropdown-menu { background: #111927; border-color: #33445f; box-shadow: 0 18px 45px #0009; }
+    .dropdown-menu a { color: #e1ebfa; }
+    .dropdown-menu .submenu-link { color: #b1c0d6; }
+    .dropdown-menu a:hover, .dropdown-menu a:focus { background: #20314b; color: #a9d1ff; }
+    .product-subcategories a { background: #172338; color: #9ac8ff; }
+    .product-subcategories a:hover, .product-subcategories a:focus { background: #223652; color: #c2e0ff; }
+    .product-subcategories h4 a { background: transparent; color: #90bfff; }
+    .cob-products h4 { color: #90bfff; }
+    .cob-specs { background: #131f32; }
+    .cob-select { background: #0b1220; color: #eef3fc; border-color: #3a4d6b; }
+    .category-tabs a { border-color: #354762; color: #c7d5e9; }
+    .category-tabs a[aria-current="page"] { background: #245fd1; color: white; }
+    .cob-product-link { background: #131d2c; border-color: #30435d; color: #e3ecfa; }
+    .cob-product-link:hover, .cob-product-link:focus-visible { background: #1b2c46; }
+    .spec-scroll { border-color: #33445f; background: #101722; }
+    .comparison-table caption { background: #131e2e; color: #dbe8fa; }
+    .comparison-table thead { background: #1d304d; color: #f4f8ff; }
+    .comparison-table th, .comparison-table td { border-color: #2b394e; }
+    .comparison-table tbody th { background: #17263d; color: #9bcbff; }
+    .comparison-table tbody td { background: #101722; color: #e0e9f7; }
+    .comparison-table tbody tr:nth-child(even) td { background: #151f2e; }
+    .comparison-table a { color: #91c2ff; }
+    .cob-spec-table th, .cob-spec-table td { border-color: #2c3b52; }
+    .cob-spec-table th { background: #162238; color: #c9ddfa; }
+    .cob-spec-table td { background: #101824; color: #e3ecf9; }
+    .cob-spec-table caption { color: #c4d8f5; padding: 12px; text-align: left; }
+    .quote-section { background: #101824; border: 1px solid #2b3b54; border-radius: 14px; color: #eaf1fc; }
+    .quote-section input, .quote-section textarea { background: #090f19; color: #eff5ff; border-color: #3a4c68; }
+    .quote-section input::placeholder, .quote-section textarea::placeholder { color: #8fa1bc; opacity: 1; }
+    .quote-section button { background: #2867df; color: #fff; border: 1px solid #6395ec; }
+    .quote-section button:hover { background: #3679ef; }
+    .quote-section .quote-note { color: #a8b7ce; }
+    :focus-visible { outline: 2px solid #91c7ff; outline-offset: 4px; }
+    @media (prefers-reduced-motion: no-preference) { .card, .application, .button { transition: border-color .18s, background-color .18s, color .18s; } }
