@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="RareMate - LED display solutions and products for professional visual applications.">
-  <title>RareMate | LED Display Solutions</title>
+  <meta name="description" content="RareMate - LED displays, LED packages and display accessories for professional applications.">
+  <title>RareMate | LED Products & Solutions</title>
   <style>
     :root {
       --navy: #101827;
@@ -140,14 +140,16 @@
     }
 
     .card-icon {
-      width: 52px;
+      width: fit-content;
+      min-width: 52px;
+      padding: 0 14px;
       height: 52px;
       display: grid;
       place-items: center;
       border-radius: 12px;
       background: #eaf0ff;
       color: var(--blue);
-      font-size: 23px;
+      font-size: 18px;
       font-weight: 800;
       margin-bottom: 20px;
     }
@@ -156,7 +158,7 @@
 
     .applications {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
     }
 
@@ -201,33 +203,84 @@
       .applications { grid-template-columns: repeat(2, 1fr); }
       .section { padding: 56px 0; }
     }
+
+    @media (max-width: 480px) {
+      .applications { grid-template-columns: 1fr; }
+    }
+
+    /* Product navigation and category links */
+    .applications-dropdown:not(.is-open) .dropdown-menu { display: none; }
+    .applications-toggle { border: 0; background: transparent; color: inherit; font: inherit; cursor: pointer; }
+    .application { scroll-margin-top: 100px; }
+    .applications-toggle:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+    @media (max-width: 480px) {
+      header nav { flex-wrap: wrap; gap: 8px; }
+      .nav-links { flex-wrap: wrap; }
+      #applications-menu { right: auto; left: 0; min-width: 0; width: min(280px, calc(100vw - 48px)); }
+      #applications-menu a { white-space: normal; }
+    }
+    .nav-dropdown { position: relative; }
+    .nav-products { display: inline-flex; align-items: center; gap: 5px; padding: 12px 0; }
+    .dropdown-menu { display: none; position: absolute; z-index: 20; top: 100%; left: -16px; min-width: 230px; background: white; border: 1px solid #e7ebf2; border-radius: 10px; box-shadow: 0 12px 30px rgba(16,24,39,.12); padding: 9px; }
+    .nav-dropdown:hover .dropdown-menu, .nav-dropdown:focus-within .dropdown-menu, .nav-dropdown.is-open .dropdown-menu { display: block; }
+    .dropdown-menu a { display: block; padding: 8px 12px; border-radius: 5px; white-space: nowrap; }
+    .dropdown-menu a:hover, .dropdown-menu a:focus { background: #eaf0ff; color: var(--blue); }
+    .dropdown-menu .submenu-link { padding-left: 28px; color: var(--muted); }
+    .product-card { scroll-margin-top: 25px; }
+    .product-subcategories { display: grid; gap: 9px; margin-top: 22px; }
+    .product-subcategories a { display: flex; align-items: center; justify-content: space-between; color: var(--blue); background: #f2f5ff; border-radius: 7px; padding: 10px 12px; font-weight: 700; }
+    .product-subcategories a:hover, .product-subcategories a:focus { background: #e2eaff; }
+    @media (max-width: 760px) {
+      .nav-links { gap: 12px; }
+      .nav-links .nav-dropdown > a { display: inline-flex !important; }
+      .nav-links .dropdown-menu a { display: block !important; }
+      .dropdown-menu { left: auto; right: 0; }
+    }
+
+    .cob-products h4 { margin: 0 0 10px; color: var(--blue); font-size: 16px; }
+    .cob-label { display: block; font-size: 13px; font-weight: 700; margin: 12px 0 7px; }
+    .cob-select { box-sizing: border-box; width: 100%; padding: 10px 12px; border: 1px solid #d5ddeb; border-radius: 7px; background: #fff; color: #172033; font: inherit; }
+    .cob-select:focus { outline: 2px solid var(--blue); outline-offset: 2px; }
+    .cob-specs { margin: 12px 0; padding: 12px; border-radius: 7px; background: #f2f5ff; }
+    .cob-specs p { margin: 0 0 7px; font-size: 13px; color: var(--muted); }
+    #cob-display { scroll-margin-top: 90px; }
+
+    .nav-dropdown:not(.is-open) .dropdown-menu { display: none; }
+    .nav-products { font-size: 14px; }
+    .category-tabs { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
+    .category-tabs a { padding: 10px 16px; border: 1px solid #d5ddeb; border-radius: 7px; color: var(--text); }
+    .category-tabs a[aria-current="page"] { background: var(--blue); color: white; border-color: var(--blue); }
+    .detail-grid { display: grid; grid-template-columns: minmax(0, 760px); }
+    .breadcrumb { margin-bottom: 22px; font-size: 14px; color: #d1d9e8; }
+    .breadcrumb a { color: #d1d9e8; }
+    .card .button { color: white; margin-top: 14px; }
+    .product-card { scroll-margin-top: 30px; }
+    .category-title-link { color: var(--text); }
+    .category-title-link:hover, .category-title-link:focus-visible { color: var(--blue); text-decoration: underline; }
+
+    /* Center the titles within homepage product and application cards. */
+    #products .card h3 { text-align: center; }
+    #applications .application > div:first-child { text-align: center; }
+
+    /* Keep the homepage headline on one line on desktop. */
+    .hero h1 { max-width: 100%; font-size: clamp(30px, 4.1vw, 46px); letter-spacing: -1.2px; }
+    @media (min-width: 761px) { .hero h1 { white-space: nowrap; } }
+    @media (max-width: 760px) { .hero h1 { font-size: clamp(28px, 5.5vw, 38px); letter-spacing: -0.7px; } }
   </style>
 </head>
 <body>
 
-  <header>
-    <nav class="container">
-      <a class="logo" href="#">
-        Rare<span>M</span><span>a</span><span>te</span>
-      </a>
-      <div class="nav-links">
-        <a href="#products">Products</a>
-        <a href="#applications">Applications</a>
-        <a href="#about">About</a>
-        <a class="button" href="#contact">Contact Us</a>
-      </div>
-    </nav>
-  </header>
+  <script src="assets/js/navigation.js"></script>
 
   <main>
-    <section class="hero">
+    <section class="hero" id="about">
       <div class="container">
-        <div class="eyebrow">Professional LED Display Solutions</div>
+        <div class="eyebrow">About RareMate</div>
         <h1>Bringing Your Visual Ideas to Life.</h1>
         <p>
-          Explore LED display products and visual solutions
-          designed for professional applications. Tell us about
-          your project and let us help you find the right solution.
+          RareMate connects you with LED displays, LED packages and accessories
+          for professional applications. Share your project requirements with us,
+          and we will help you explore suitable products and practical solutions.
         </p>
         <a class="button" href="#products">Explore Our Products</a>
       </div>
@@ -237,41 +290,13 @@
       <div class="container">
         <div class="section-heading">
           <div class="eyebrow">What We Offer</div>
-          <h2>LED Display Products</h2>
-          <p class="muted">
-            Explore display technologies for different viewing
-            environments, project requirements and budgets.
-          </p>
+          <h2>Our Products</h2>
+          <p class="muted">Explore our LED displays, LED packages and accessories for professional projects.</p>
         </div>
-
-        <div class="cards">
-          <article class="card">
-            <div class="card-icon">COB</div>
-            <h3>COB LED Displays</h3>
-            <p class="muted">
-              Fine-pitch LED display options for close-viewing
-              environments and professional visual installations.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="card-icon">LED</div>
-            <h3>Indoor LED Displays</h3>
-            <p class="muted">
-              LED display products for meeting rooms, control rooms,
-              retail environments and other indoor applications.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="card-icon">AV</div>
-            <h3>Display Accessories</h3>
-            <p class="muted">
-              Related components and accessories to support
-              LED display projects and system integration.
-            </p>
-          </article>
-        </div>
+        <div class="cards"><article class="card"><h3><a href="led-display.html" class="category-title-link">LED Display</a></h3><p class="muted">LED display solutions for your visual projects.</p></article>
+<article class="card"><h3><a href="led-package.html" class="category-title-link">LED Package</a></h3><p class="muted">SMD and DIP LED packages for display manufacturing and integration.</p></article>
+<article class="card"><h3><a href="led-accessories.html" class="category-title-link">LED Display Accessories</a></h3><p class="muted">Accessories for LED display installation, maintenance and system integration.</p></article>
+</div>
       </div>
     </section>
 
@@ -281,31 +306,19 @@
           <div class="eyebrow">Where We Fit</div>
           <h2>Applications</h2>
           <p class="muted">
-            Flexible display options for a variety of professional
-            and commercial environments.
+            Flexible LED display solutions for commercial spaces, corporate and educational
+            environments, control rooms, broadcast studios, and home cinemas.
           </p>
         </div>
 
         <div class="applications">
-          <div class="application">Meeting Rooms</div>
-          <div class="application">Control Rooms</div>
-          <div class="application">Broadcast Studios</div>
-          <div class="application">Retail &amp; Showrooms</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">About RareMate</div>
-          <h2>A Reliable Partner for Your Display Projects</h2>
-          <p class="muted">
-            RareMate aims to connect customers with suitable LED
-            display products and practical solutions. Share your
-            application, pixel pitch, screen size and project
-            requirements to start a conversation with us.
-          </p>
+          <div class="application" id="application-retail-commercial"><div><a href="application-retail-commercial.html" style="color:inherit">Retail &amp; Commercial</a></div><p style="font-size:14px;font-weight:400"><a href="display-r-series.html" style="color:var(--blue)">R Series Micro LED Display</a></p><p style="font-size:14px;font-weight:400"><a href="display-r-pro-series.html" style="color:var(--blue)">R Pro Series Micro LED Display</a></p></div>
+          <div class="application" id="application-corporate-education"><div><a href="application-corporate-education.html" style="color:inherit">Corporate &amp; Education</a></div><p style="font-size:14px;font-weight:400"><a href="display-r-series.html" style="color:var(--blue)">R Series Micro LED Display</a></p><p style="font-size:14px;font-weight:400"><a href="display-r-pro-series.html" style="color:var(--blue)">R Pro Series Micro LED Display</a></p></div>
+          <div class="application" id="application-control-rooms"><div><a href="application-control-rooms.html" style="color:inherit">Control Rooms</a></div><p style="font-size:14px;font-weight:400"><a href="display-c-series.html" style="color:var(--blue)">C Series Micro LED Display</a></p><p style="font-size:14px;font-weight:400"><a href="display-b-series.html" style="color:var(--blue)">B Series Micro LED Display</a></p></div>
+          <div class="application" id="application-broadcast"><div><a href="application-broadcast.html" style="color:inherit">Broadcast</a></div><p style="font-size:14px;font-weight:400"><a href="display-b-series.html" style="color:var(--blue)">B Series Micro LED Display</a></p></div>
+          <div class="application" id="application-home-cinema"><div><a href="application-home-cinema.html" style="color:inherit">Home Cinema</a></div><p style="font-size:14px;font-weight:400"><a href="display-h-series.html" style="color:var(--blue)">H Series Micro LED TV</a></p></div>
+<div class="application" id="application-outdoor-billboard"><div><a href="application-outdoor-billboard.html" style="color:inherit">Outdoor Billboard</a></div><p style="font-size:14px;font-weight:400"><a href="display-o-series.html" style="color:var(--blue)">O Series Outdoor LED Display</a></p></div>
+          <div class="application" id="application-display-manufacturing"><div><a href="application-display-production.html" style="color:inherit">Display Production</a></div><p style="font-size:14px;font-weight:400"><a href="package-smd.html" style="color:var(--blue)">SMD LED Packages</a></p><p style="font-size:14px;font-weight:400"><a href="package-dip.html" style="color:var(--blue)">DIP LED Packages</a></p></div>
         </div>
       </div>
     </section>
@@ -313,7 +326,7 @@
     <section class="contact" id="contact">
       <div class="container">
         <div class="eyebrow">Start a Conversation</div>
-        <h2>Have an LED Display Project?</h2>
+        <h2>Looking for LED Products?</h2>
         <p>
           Tell us what you need. Contact us to discuss product
           options, technical specifications and project quotations.
@@ -329,196 +342,43 @@
   <footer>
     <div class="container">
       <div>&copy; 2026 RareMate. All rights reserved.</div>
-      <div>LED Display Products &amp; Solutions</div>
+      <div>LED Displays, Packages &amp; Accessories</div>
     </div>
   </footer>
 
   
-<!-- RareMate Request a Quote -->
-<section id="request-quote" class="quote-section">
-  <h2>Request a Quote</h2>
-  <p>
-    Tell us about your LED display project.
-    Our team will get back to you as soon as possible.
-  </p>
-
-  <form id="quoteForm">
-    <label for="customerName">Full Name *</label>
-    <input
-      id="customerName"
-      name="customerName"
-      required
-      placeholder="Your full name"
-    >
-
-    <label for="company">Company</label>
-    <input
-      id="company"
-      name="company"
-      placeholder="Company name"
-    >
-
-    <label for="customerEmail">Business Email *</label>
-    <input
-      id="customerEmail"
-      name="customerEmail"
-      type="email"
-      required
-      placeholder="name@company.com"
-    >
-
-    <label for="country">Country / Region</label>
-    <input
-      id="country"
-      name="country"
-      placeholder="e.g. United States"
-    >
-
-    <label for="product">Product / Pixel Pitch *</label>
-    <input
-      id="product"
-      name="product"
-      required
-      placeholder="e.g. COB P1.25"
-    >
-
-    <label for="quantity">Quantity / Screen Size</label>
-    <input
-      id="quantity"
-      name="quantity"
-      placeholder="e.g. 20 sqm or 5 screens"
-    >
-
-    <label for="message">Project Requirements *</label>
-    <textarea
-      id="message"
-      name="message"
-      required
-      rows="5"
-      placeholder="Please describe your project, application, delivery schedule, etc."
-    ></textarea>
-
-    <button type="submit">Send Inquiry</button>
-  </form>
-
-  <p class="quote-note">
-    Your email application will open with your inquiry prepared.
-    Please review and send the email to complete your request.
-  </p>
-</section>
-
-<style>
-  .quote-section {
-    box-sizing: border-box;
-    max-width: 640px;
-    margin: 48px auto;
-    padding: 24px;
-    font-family: Arial, sans-serif;
-  }
-
-  .quote-section h2 {
-    margin-bottom: 12px;
-  }
-
-  .quote-section p {
-    line-height: 1.6;
-  }
-
-  .quote-section label {
-    display: block;
-    margin-top: 16px;
-    margin-bottom: 6px;
-    font-weight: 600;
-  }
-
-  .quote-section input,
-  .quote-section textarea {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font: inherit;
-  }
-
-  .quote-section input:focus,
-  .quote-section textarea:focus {
-    outline: 2px solid #555;
-    outline-offset: 1px;
-  }
-
-  .quote-section button {
-    margin-top: 20px;
-    padding: 13px 24px;
-    border: none;
-    border-radius: 5px;
-    background: #111;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  .quote-section button:hover {
-    background: #333;
-  }
-
-  .quote-section .quote-note {
-    margin-top: 14px;
-    font-size: 13px;
-    color: #666;
-  }
-
-  @media (max-width: 600px) {
-    .quote-section {
-      margin: 24px auto;
-      padding: 18px;
-    }
-  }
-</style>
-
 <script>
-  document
-    .getElementById("quoteForm")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
 
-      const form = event.currentTarget;
+  const cobPitch = document.getElementById('cob-pitch');
+  const cobPanelSize = document.getElementById('cob-panel-size');
+  const cobInquiry = document.getElementById('cob-inquiry');
 
-      if (!form.reportValidity()) {
-        return;
-      }
+  function updateCobInquiry() {
+    cobInquiry.dataset.product = 'Micro LED Display ' + cobPitch.value +
+      ' — Brightness: 600 nits, Refresh Rate: 3840Hz, Panel Size: ' + cobPanelSize.value;
+  }
 
-      const data = new FormData(form);
+  function updateCobPanelSizes() {
+    const previousSize = cobPanelSize.value;
+    const sizes = ['600 × 337.5 mm'];
+    if (['P1.2', 'P1.5', 'P1.8'].includes(cobPitch.value)) {
+      sizes.push('600 × 675 mm');
+    }
+    cobPanelSize.replaceChildren(...sizes.map(function (size) {
+      return new Option(size, size);
+    }));
+    if (sizes.includes(previousSize)) cobPanelSize.value = previousSize;
+    updateCobInquiry();
+  }
 
-      const company = (data.get("company") || "").trim();
+  if (cobPitch && cobPanelSize && cobInquiry) {
+  cobPitch.addEventListener('change', updateCobPanelSizes);
+  cobPanelSize.addEventListener('change', updateCobInquiry);
+  updateCobPanelSizes();
+  }
 
-      const subject = company
-        ? "LED Display Inquiry - " + company
-        : "LED Display Inquiry";
-
-      const body = [
-        "New inquiry from RareMate website",
-        "",
-        "Name: " + data.get("customerName"),
-        "Company: " + (company || "Not provided"),
-        "Business Email: " + data.get("customerEmail"),
-        "Country / Region: " + (data.get("country") || "Not provided"),
-        "Product / Pixel Pitch: " + data.get("product"),
-        "Quantity / Screen Size: " + (data.get("quantity") || "Not provided"),
-        "",
-        "Project Requirements:",
-        data.get("message")
-      ].join("\n");
-
-      const mailto =
-        "mailto:sales@raremate.com" +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
-
-      window.location.href = mailto;
-    });
 </script>
 
+<link rel="stylesheet" href="assets/css/theme-dark.css">
 </body>
 </html>

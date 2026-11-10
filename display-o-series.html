@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RareMate O Series outdoor LED displays. P4, P6, P8 and P10; 960 × 960 mm cabinets; P4 6000 nits (8000 nits optional), other pitches 7500 nits (9500 nits optional); IP66.">
+  <title>O Series | Outdoor LED Display | RareMate</title>
+  <link rel="stylesheet" href="assets/css/base-h-o-series.css">
+</head>
+<body>
+
+  <script src="assets/js/navigation.js"></script>
+
+  <main><section class="hero category-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a> / <a href="led-display.html">LED Display</a> / O Series</div><div class="eyebrow">Outdoor LED Display</div><h1>O Series</h1><a class="button" href="#specifications">View Specifications</a><p style="font-size:15px">Application: <a href="application-outdoor-billboard.html" style="color:#d1d9e8;text-decoration:underline">Outdoor Billboard →</a></p></div></section><section class="section" id="specifications"><div class="container"><div class="section-heading"><div class="eyebrow">Product Overview</div><h2>O Series Specifications</h2></div><div class="spec-scroll" role="region" aria-label="O Series specifications" tabindex="0"><table class="comparison-table"><caption>O Series — Model Comparison</caption><thead><tr><th scope="col">Pixel Pitch</th><th scope="col">Cabinet Size</th><th scope="col">Brightness</th><th scope="col">IP Rating</th><th scope="col">Inquiry</th></tr></thead><tbody><tr id="o-p4"><th scope="row">P4</th><td>960 × 960 mm</td><td>6000 nits<br><span class="muted">8000 nits optional</span></td><td>IP66</td><td><a href="#request-quote" data-product="O Series P4 — Cabinet Size: 960 × 960 mm, Brightness: 6000 nits / 8000 nits optional, IP Rating: IP66">Request Quote →</a></td></tr><tr id="o-p6"><th scope="row">P6</th><td>960 × 960 mm</td><td>7500 nits<br><span class="muted">9500 nits optional</span></td><td>IP66</td><td><a href="#request-quote" data-product="O Series P6 — Cabinet Size: 960 × 960 mm, Brightness: 7500 nits / 9500 nits optional, IP Rating: IP66">Request Quote →</a></td></tr><tr id="o-p8"><th scope="row">P8</th><td>960 × 960 mm</td><td>7500 nits<br><span class="muted">9500 nits optional</span></td><td>IP66</td><td><a href="#request-quote" data-product="O Series P8 — Cabinet Size: 960 × 960 mm, Brightness: 7500 nits / 9500 nits optional, IP Rating: IP66">Request Quote →</a></td></tr><tr id="o-p10"><th scope="row">P10</th><td>960 × 960 mm</td><td>7500 nits<br><span class="muted">9500 nits optional</span></td><td>IP66</td><td><a href="#request-quote" data-product="O Series P10 — Cabinet Size: 960 × 960 mm, Brightness: 7500 nits / 9500 nits optional, IP Rating: IP66">Request Quote →</a></td></tr></tbody></table></div><p><a href="led-display.html">← Back to LED Display</a></p></div></section>    <section class="contact" id="contact">
+      <div class="container">
+        <div class="eyebrow">Start a Conversation</div>
+        <h2>Looking for LED Products?</h2>
+        <p>
+          Tell us what you need. Contact us to discuss product
+          options, technical specifications and project quotations.
+        </p>
+        <a class="button"
+           href="mailto:sales@raremate.com?subject=LED%20Display%20Inquiry">
+          Send an Inquiry
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>&copy; 2026 RareMate. All rights reserved.</div>
+      <div>LED Displays, Packages &amp; Accessories</div>
+    </div>
+  </footer>
+
+  
+<!-- RareMate Request a Quote -->
+<section id="request-quote" class="quote-section">
+  <h2>Request a Quote</h2>
+  <p>
+    Tell us about the LED products you need.
+    Our team will get back to you as soon as possible.
+  </p>
+
+  <form id="quoteForm">
+    <label for="customerName">Full Name *</label>
+    <input
+      id="customerName"
+      name="customerName"
+      required
+      placeholder="Your full name"
+    >
+
+    <label for="company">Company</label>
+    <input
+      id="company"
+      name="company"
+      placeholder="Company name"
+    >
+
+    <label for="customerEmail">Business Email *</label>
+    <input
+      id="customerEmail"
+      name="customerEmail"
+      type="email"
+      required
+      placeholder="name@company.com"
+    >
+
+    <label for="country">Country / Region</label>
+    <input
+      id="country"
+      name="country"
+      placeholder="e.g. United States"
+    >
+
+    <label for="product">Product / Specification *</label>
+    <input
+      id="product"
+      name="product"
+      required
+      placeholder="e.g. Micro LED Display P1.25, SMD package"
+    >
+
+    <label for="quantity">Quantity / Screen Size</label>
+    <input
+      id="quantity"
+      name="quantity"
+      placeholder="e.g. 20 sqm or 5 screens"
+    >
+
+    <label for="message">Project Requirements *</label>
+    <textarea
+      id="message"
+      name="message"
+      required
+      rows="5"
+      placeholder="Please describe your project, application, delivery schedule, etc."
+    ></textarea>
+
+    <button type="submit">Send Inquiry</button>
+  </form>
+
+  <p class="quote-note">
+    Your email application will open with your inquiry prepared.
+    Please review and send the email to complete your request.
+  </p>
+</section>
+
+<link rel="stylesheet" href="assets/css/quote-form.css">
+
+<script>
+
+  document.getElementById('product').value = 'O Series Outdoor LED Display';
+
+  const cobPitch = document.getElementById('cob-pitch');
+  const cobPanelSize = document.getElementById('cob-panel-size');
+  const cobInquiry = document.getElementById('cob-inquiry');
+
+  function updateCobInquiry() {
+    cobInquiry.dataset.product = 'Micro LED Display ' + cobPitch.value +
+      ' — Brightness: 600 nits, Refresh Rate: 3840Hz, Panel Size: ' + cobPanelSize.value;
+  }
+
+  function updateCobPanelSizes() {
+    const previousSize = cobPanelSize.value;
+    const sizes = ['600 × 337.5 mm'];
+    if (['P1.2', 'P1.5', 'P1.8'].includes(cobPitch.value)) {
+      sizes.push('600 × 675 mm');
+    }
+    cobPanelSize.replaceChildren(...sizes.map(function (size) {
+      return new Option(size, size);
+    }));
+    if (sizes.includes(previousSize)) cobPanelSize.value = previousSize;
+    updateCobInquiry();
+  }
+
+  if (cobPitch && cobPanelSize && cobInquiry) {
+  cobPitch.addEventListener('change', updateCobPanelSizes);
+  cobPanelSize.addEventListener('change', updateCobInquiry);
+  updateCobPanelSizes();
+  }
+
+  document.querySelectorAll('[data-product]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      document.getElementById('product').value = link.dataset.product;
+    });
+  });
+
+  document
+    .getElementById("quoteForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const form = event.currentTarget;
+
+      if (!form.reportValidity()) {
+        return;
+      }
+
+      const data = new FormData(form);
+
+      const company = (data.get("company") || "").trim();
+
+      const subject = company
+        ? "LED Display Inquiry - " + company
+        : "LED Display Inquiry";
+
+      const body = [
+        "New inquiry from RareMate website",
+        "",
+        "Name: " + data.get("customerName"),
+        "Company: " + (company || "Not provided"),
+        "Business Email: " + data.get("customerEmail"),
+        "Country / Region: " + (data.get("country") || "Not provided"),
+        "Product / Specification: " + data.get("product"),
+        "Quantity / Screen Size: " + (data.get("quantity") || "Not provided"),
+        "",
+        "Project Requirements:",
+        data.get("message")
+      ].join("\n");
+
+      const mailto =
+        "mailto:sales@raremate.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
+      window.location.href = mailto;
+    });
+</script>
+
+<link rel="stylesheet" href="assets/css/theme-dark.css">
+</body>
+</html>
