@@ -7,6 +7,7 @@
   <meta name="description" content="RareMate C Series Micro LED displays for control rooms. P0.9, P1.2, P1.5 and P1.8; 600 × 337.5 mm cabinets; 1000 nits; 7680 Hz; optional power and signal redundancy.">
   <title>C Series | Control Room Micro LED Display | RareMate</title>
   <link rel="stylesheet" href="assets/css/base-display-series.css">
+<link rel="icon" type="image/png" href="assets/images/raremate-logo.png">
 </head>
 <body>
 
@@ -36,7 +37,7 @@
   <footer>
     <div class="container">
       <div>&copy; 2026 RareMate. All rights reserved.</div>
-      <div>LED Displays, Packages &amp; Accessories</div>
+      <div>LED Displays &amp; Packages</div>
     </div>
   </footer>
 
@@ -108,13 +109,11 @@
     <button type="submit">Send Inquiry</button>
   </form>
 
-  <p class="quote-note">
-    Your email application will open with your inquiry prepared.
-    Please review and send the email to complete your request.
-  </p>
+  <p class="quote-note">You may also <a href="mailto:sales@raremate.com?subject=LED%20Product%20Inquiry">email sales@raremate.com directly</a>.</p><p class="quote-status" role="status" aria-live="polite"></p>
 </section>
 
 <link rel="stylesheet" href="assets/css/quote-form.css">
+<script src="assets/js/quote-submit.js" defer></script>
 
 <script>
 
@@ -154,48 +153,10 @@
     });
   });
 
-  document
-    .getElementById("quoteForm")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
 
-      const form = event.currentTarget;
-
-      if (!form.reportValidity()) {
-        return;
-      }
-
-      const data = new FormData(form);
-
-      const company = (data.get("company") || "").trim();
-
-      const subject = company
-        ? "LED Display Inquiry - " + company
-        : "LED Display Inquiry";
-
-      const body = [
-        "New inquiry from RareMate website",
-        "",
-        "Name: " + data.get("customerName"),
-        "Company: " + (company || "Not provided"),
-        "Business Email: " + data.get("customerEmail"),
-        "Country / Region: " + (data.get("country") || "Not provided"),
-        "Product / Specification: " + data.get("product"),
-        "Quantity / Screen Size: " + (data.get("quantity") || "Not provided"),
-        "",
-        "Project Requirements:",
-        data.get("message")
-      ].join("\n");
-
-      const mailto =
-        "mailto:sales@raremate.com" +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
-
-      window.location.href = mailto;
-    });
 </script>
 
 <link rel="stylesheet" href="assets/css/theme-dark.css">
+<link rel="stylesheet" href="assets/css/raremate-design.css">
 </body>
 </html>

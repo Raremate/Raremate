@@ -4,9 +4,9 @@
 
 ## 网页命名
 - index.html：网站首页。
-- led-display.html、led-package.html、led-accessories.html：三大产品分类入口。
+- led-display.html、led-package.html：两大产品分类入口。
 - display-*-series.html：LED Display 产品系列页面（R、R Pro、C、B、H、O）。
-- package-smd.html、package-dip.html：SMD 和 DIP 产品页面。
+- led-package.html、package-dip.html：LED Package 分类及 DIP 产品页面，SMD 系列入口位于 LED Package 页面。
 - package-smd-3528.html、package-smd-2835.html、package-smd-5050.html：各 SMD 系列规格页面。
 - application-*.html：应用场景页面。
 
